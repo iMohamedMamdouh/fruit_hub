@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/core/helper_funcations/on_generate_route.dart';
+import 'package:fruit_hub/features/splash/presentation/splashscreen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const FruitHub());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class FruitHub extends StatelessWidget {
+  const FruitHub({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      //home: HomeScreen(),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      onGenerateRoute: onGenerateRoute,
+      initialRoute: Splashscreen.routeName,
     );
   }
 }
