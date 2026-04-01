@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/features/auth/presentation/views/login_screen.dart';
+import 'package:fruit_hub/features/auth/presentation/views/signup_screen.dart';
 import 'package:fruit_hub/features/on_boarding/presentation/on_boarding_screen.dart';
 import 'package:fruit_hub/features/splash/presentation/splashscreen.dart';
 
 Route<dynamic> onGenerateRoute(RouteSettings settings) {
   switch (settings.name) {
+    case SignupScreen.routeName:
+      return MaterialPageRoute(builder: (context) => const SignupScreen());
     case Splashscreen.routeName:
       return MaterialPageRoute(builder: (context) => const Splashscreen());
     case OnBoardingScreen.routeName:

@@ -37,6 +37,7 @@ class _SplashScreenBodyState extends State<SplashScreenBody> {
 
   void excuteNavigation() {
     Future.delayed(const Duration(seconds: 2), () {
+      if (!mounted) return;
       if (Prefs.getBool(isBoardingShownKey)) {
         Navigator.pushReplacementNamed(context, LoginScreen.routeName);
       } else {
